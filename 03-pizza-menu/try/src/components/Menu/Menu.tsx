@@ -7,15 +7,21 @@ const Menu = () => {
       <h2>our menu</h2>
 
       <ul className="pizzas">
-        {pizzaData.map((pizza, index) => (
-          <Pizza
-            key={index}
-            name={pizza.name}
-            ingredients={pizza.ingredients}
-            photoName={pizza.photoName}
-            price={pizza.price}
-          />
-        ))}
+        {pizzaData.length > 0 ? (
+          pizzaData.map((pizza, index) => (
+            <Pizza
+              key={index}
+              name={pizza.name}
+              ingredients={pizza.ingredients}
+              photoName={pizza.photoName}
+              price={pizza.price}
+            />
+          ))
+        ) : (
+          <h1 style={{ textAlign: "center", width: "100%", display: "block" }}>
+            We're still working on our menu. Please come back later :)
+          </h1>
+        )}
       </ul>
     </main>
   );
