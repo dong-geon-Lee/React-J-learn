@@ -7,12 +7,14 @@ interface Pprops {
 
 const Pizza = (props: Pprops) => {
   return (
-    <div>
+    <li className="pizza">
       <img src={props.photoName} alt={props.name} />
-      <h3>{props.name}</h3>
-      <p>{props.ingredients}</p>
-      <span>{props.price + 3}</span>
-    </div>
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.price + 3}</span>
+      </div>
+    </li>
   );
 };
 

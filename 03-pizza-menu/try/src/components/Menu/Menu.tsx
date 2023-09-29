@@ -1,16 +1,23 @@
+import { pizzaData } from "../../data/data";
 import Pizza from "../Pizza/Pizza";
 
 const Menu = () => {
   return (
-    <div className="menu">
+    <main className="menu">
       <h2>our menu</h2>
-      <Pizza
-        name="Pizza Spinaci"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="pizzas/spinaci.jpg"
-        price={10}
-      />
-    </div>
+
+      <ul className="pizzas">
+        {pizzaData.map((pizza, index) => (
+          <Pizza
+            key={index}
+            name={pizza.name}
+            ingredients={pizza.ingredients}
+            photoName={pizza.photoName}
+            price={pizza.price}
+          />
+        ))}
+      </ul>
+    </main>
   );
 };
 
