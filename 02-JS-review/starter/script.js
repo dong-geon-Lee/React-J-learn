@@ -142,3 +142,48 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+const book = getBook(2);
+console.log(book);
+
+const {
+  title: newTitle,
+  author,
+  pages,
+  publicationDate,
+  genres,
+  hasMovieAdaptation,
+} = book;
+console.log(newTitle, author, genres);
+
+const [firstG, , secondG, ...endG] = genres;
+console.log(firstG, secondG, endG);
+
+const newGenres = [...endG, "epic"];
+console.log(newGenres);
+
+const updateBook = {
+  ...book,
+  movieDate: "날짜 추가",
+  file: "파워풀!",
+};
+
+console.log(updateBook);
+
+console.log(`${updateBook.file} 안녕하세요 세상아!`);
+
+const word = "file-your";
+const getYear = () => word.split("-")[0];
+console.log(getYear());
+
+//* falsy 0, "", null, undefined
+
+const count = 0 ?? "no data";
+console.log(count);
+
+const getTotal = (book) => {
+  const goodRead = book.pow?.alj ?? "ㅎ";
+  return goodRead;
+};
+
+console.log(getTotal(book));
