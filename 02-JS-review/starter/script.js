@@ -187,3 +187,58 @@ const getTotal = (book) => {
 };
 
 console.log(getTotal(book));
+
+const x = [1, 2, 3, 4, 5].map((el) => el * 2);
+console.log(x);
+
+const imBooks = getBooks();
+const essentialDate = imBooks.map((book) => ({
+  title: book.title,
+  author: book.author,
+  how: 3,
+}));
+
+console.log(getBook(3));
+console.log(essentialDate);
+
+const longBooks = imBooks
+  .filter((book) => book.pages > 500 && book.genres.includes("adventure"))
+  .map((data) => data.author);
+
+console.log(longBooks);
+
+const pagesAllBooks = imBooks.reduce((acc, cur) => acc + cur.pages, 0);
+console.log(pagesAllBooks);
+
+const x1 = [3, 5521, 3212, 111, 55, 378];
+
+const sorted = [...x1].sort((a, b) => b - a);
+console.log(x1);
+console.log(sorted);
+
+const newBook = {
+  id: 6,
+  title: "Harry Potter and the Chamber of Secrets",
+  author: "J. K. Rowling",
+};
+
+// 추가
+const booksAfterAdd = [...imBooks, newBook];
+console.log(booksAfterAdd);
+
+// 삭제
+const booksDelete = imBooks.filter((imBook) => imBook.id !== 3);
+console.log(booksDelete);
+
+// 편집
+const bookUpdate = imBooks.map((imBook) =>
+  imBook.id === 1 ? { ...imBook, id: 111 } : imBook
+);
+
+console.log(bookUpdate);
+
+const getTodos = async () => {
+  const response = await fetch("htttp....");
+  const data = await response.json();
+  return data;
+};
