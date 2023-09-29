@@ -1,9 +1,17 @@
-const Pizza = () => {
+interface Pprops {
+  name: string;
+  ingredients: string;
+  photoName: string;
+  price: number;
+}
+
+const Pizza = (props: Pprops) => {
   return (
     <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza spinaci" />
-      <h3>Pizza Spinaci</h3>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+      <img src={props.photoName} alt={props.name} />
+      <h3>{props.name}</h3>
+      <p>{props.ingredients}</p>
+      <span>{props.price + 3}</span>
     </div>
   );
 };

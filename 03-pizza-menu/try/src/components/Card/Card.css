@@ -1,0 +1,43 @@
+.containers {
+  width: 50rem;
+  height: 100%;
+  background-color: #fff;
+  border: 5px solid #000;
+}
+
+.catImg {
+  width: 100%;
+  height: 46rem;
+  object-fit: cover;
+  display: block;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.6rem;
+}
+
+.box .title {
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+}
+
+.skill {
+  padding: 2.6rem;
+  padding-top: 0;
+  font-size: 1.8rem;
+}
+
+.skill__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  gap: 0.6rem;
+}
+
+.skill__list li label {
+  margin-right: 0.8rem;
+}
