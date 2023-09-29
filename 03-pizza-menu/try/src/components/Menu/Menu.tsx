@@ -15,6 +15,7 @@ const Menu = () => {
               ingredients={pizza.ingredients}
               photoName={pizza.photoName}
               price={pizza.price}
+              soldOut={pizza.soldOut}
             />
           ))
         ) : (

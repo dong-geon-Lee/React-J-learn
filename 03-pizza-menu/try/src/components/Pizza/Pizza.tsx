@@ -3,9 +3,12 @@ interface Pprops {
   ingredients: string;
   photoName: string;
   price: number;
+  soldOut: boolean;
 }
 
 const Pizza = (props: Pprops) => {
+  if (props.soldOut) return null;
+
   return (
     <li className="pizza">
       <img src={props.photoName} alt={props.name} />
