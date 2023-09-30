@@ -6,9 +6,9 @@ import Card from "./components/Card/Card";
 const App = () => {
   return (
     <div className="container">
-      {/* <Header />
+      <Header />
       <Menu />
-      <Footer /> */}
+      <Footer />
       <Card />
     </div>
   );
