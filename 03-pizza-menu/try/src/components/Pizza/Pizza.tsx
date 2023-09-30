@@ -1,4 +1,4 @@
-interface Pprops {
+interface IProps {
   name: string;
   ingredients: string;
   photoName: string;
@@ -6,16 +6,14 @@ interface Pprops {
   soldOut: boolean;
 }
 
-const Pizza = (props: Pprops) => {
-  if (props.soldOut) return null;
-
+const Pizza = ({ photoName, name, ingredients, price, soldOut }: IProps) => {
   return (
     <li className="pizza">
-      <img src={props.photoName} alt={props.name} />
+      <img src={photoName} alt={name} />
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.price + 3}</span>
+        <h3>{name}</h3>
+        <p>{ingredients}</p>
+        <span>{soldOut ? "Sold out" : price + 3}</span>
       </div>
     </li>
   );
