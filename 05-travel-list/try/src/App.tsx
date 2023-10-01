@@ -5,7 +5,7 @@ import PackingList from "./components/PackingList";
 import Stats from "./components/Stats";
 
 export interface IProps {
-  id?: number;
+  id: number;
   description: string;
   quantity: number;
   packed: boolean;
@@ -20,11 +20,16 @@ const initialItems = [
 const App = () => {
   const [trips, setTrips] = useState<IProps[]>(initialItems);
 
+  const handleDeleteTrip = (id: number): void => {
+    const tripResults = trips.filter((trip) => trip.id !== id);
+    setTrips(tripResults);
+  };
+
   return (
     <div className="App">
       <Logo />
       <Form trips={trips} setTrips={setTrips} />
-      <PackingList trips={trips} />
+      <PackingList trips={trips} handleDeleteTrip={handleDeleteTrip} />
       <Stats />
     </div>
   );

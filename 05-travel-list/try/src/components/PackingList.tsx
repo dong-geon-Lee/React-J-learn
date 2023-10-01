@@ -1,7 +1,7 @@
 import Item from "./Item";
 
 export interface IProps {
-  id?: number;
+  id: number;
   description: string;
   quantity: number;
   packed: boolean;
@@ -9,14 +9,15 @@ export interface IProps {
 
 interface TProps {
   trips: IProps[];
+  handleDeleteTrip: (id: number) => void;
 }
 
-const PackingList = ({ trips }: TProps) => {
+const PackingList = ({ trips, handleDeleteTrip }: TProps) => {
   return (
     <>
       <ul className="list">
         {trips.map((item) => (
-          <Item key={item.id} item={item} />
+          <Item key={item.id} item={item} handleDeleteTrip={handleDeleteTrip} />
         ))}
       </ul>
     </>
