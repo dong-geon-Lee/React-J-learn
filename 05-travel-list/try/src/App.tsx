@@ -40,6 +40,7 @@ const App = () => {
       <Form trips={trips} setTrips={setTrips} />
       <PackingList
         trips={trips}
+        setTrips={setTrips}
         handleDeleteTrip={handleDeleteTrip}
         handleToggleItem={handleToggleItem}
       />
