@@ -19,18 +19,31 @@ const initialItems = [
 
 const App = () => {
   const [trips, setTrips] = useState<IProps[]>(initialItems);
+  const numItems = trips.length;
 
   const handleDeleteTrip = (id: number): void => {
     const tripResults = trips.filter((trip) => trip.id !== id);
     setTrips(tripResults);
   };
 
+  const handleToggleItem = (id: number): void => {
+    const updateItem = trips.map((trip) => {
+      return trip.id === id ? { ...trip, packed: !trip.packed } : trip;
+    });
+
+    setTrips(updateItem);
+  };
+
   return (
     <div className="App">
       <Logo />
       <Form trips={trips} setTrips={setTrips} />
-      <PackingList trips={trips} handleDeleteTrip={handleDeleteTrip} />
-      <Stats />
+      <PackingList
+        trips={trips}
+        handleDeleteTrip={handleDeleteTrip}
+        handleToggleItem={handleToggleItem}
+      />
+      <Stats trips={trips} numItems={numItems} />
     </div>
   );
 };
