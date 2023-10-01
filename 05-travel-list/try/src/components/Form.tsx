@@ -27,7 +27,9 @@ const Form = ({ trips, setTrips }: TProps) => {
     });
   };
 
-  const onChange = (e: any) => {
+  const onChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setTripReserveredInfo({
       ...tripReserveredInfo,
       [e.target.name]: e.target.value,
