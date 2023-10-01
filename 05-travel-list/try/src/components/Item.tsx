@@ -1,14 +1,11 @@
-interface IProps {
-  item: {
-    id: number;
-    description: string;
-    quantity: number;
-    packed: boolean;
-  };
+import { IProps } from "../App";
+
+interface XProps {
+  item: IProps;
   handleDeleteTrip: (id: number) => void;
 }
 
-const Item = ({ item, handleDeleteTrip }: IProps) => {
+const Item = ({ item, handleDeleteTrip }: XProps) => {
   return (
     <li>
       <span style={{ textDecoration: item.packed ? "line-through" : "none" }}>

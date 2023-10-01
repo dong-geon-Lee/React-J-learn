@@ -1,11 +1,5 @@
+import { IProps } from "../App";
 import Item from "./Item";
-
-export interface IProps {
-  id: number;
-  description: string;
-  quantity: number;
-  packed: boolean;
-}
 
 interface TProps {
   trips: IProps[];
