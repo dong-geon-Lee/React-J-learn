@@ -1,0 +1,13 @@
+.card__box {
+  padding: 10rem;
+  margin: 6rem;
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.card_back {
+  padding: 10rem;
+  margin: 6rem;
+  cursor: pointer;
+  background-color: aqua;
+}

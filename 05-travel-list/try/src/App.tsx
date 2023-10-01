@@ -20,7 +20,6 @@ const initialItems = [
 const App = () => {
   const [trips, setTrips] = useState<IProps[]>(initialItems);
 
-  console.log(trips);
   return (
     <div className="App">
       <Logo />
