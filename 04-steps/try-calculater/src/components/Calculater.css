@@ -1,0 +1,27 @@
+.container {
+  padding: 10rem;
+}
+
+.typo {
+  font-size: 1.6rem;
+}
+
+.label__text {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.cal__input {
+  padding: 0.4rem;
+  width: 25%;
+}
+
+.result__text {
+  margin-top: 2rem;
+}
+
+.btn__reset {
+  margin-top: 1rem;
+  padding: 0.6rem 1.6rem;
+  cursor: pointer;
+}

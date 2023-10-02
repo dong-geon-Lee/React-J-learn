@@ -21,7 +21,7 @@ const Conuter = () => {
     setCount((prevState) => prevState + stepNum);
   };
 
-  const currentDates = new Date().toLocaleDateString("");
+  const currentDates = "2023.10.1";
   const [year, month, dates] = currentDates
     .split(".")
     .filter((x) => x !== "")
