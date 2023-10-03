@@ -39,7 +39,7 @@ const Friends = ({
                 ? `${friend.name} owes you ${friend.balance}$`
                 : `${
                     friend.balance < 0
-                      ? `You owe ${friend.name} ${friend.balance}$`
+                      ? `You owe ${friend.name} ${Math.abs(friend.balance)}$`
                       : `You and ${friend.name} are even`
                   }`}
             </p>

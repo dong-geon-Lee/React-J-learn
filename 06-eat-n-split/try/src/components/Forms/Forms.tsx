@@ -26,7 +26,11 @@ const Forms = ({
 
   const onSubmit = (e: any) => {
     e.preventDefault();
-    const addFriends = [...friendLists, friendInfo];
+
+    const addFriends = [
+      ...friendLists,
+      { id: Math.floor(Math.random() * 900000), ...friendInfo },
+    ];
     setFriendLists(addFriends);
   };
 

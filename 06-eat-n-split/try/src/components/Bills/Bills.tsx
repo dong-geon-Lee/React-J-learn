@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IProps } from "../../App";
 
 interface XProps {
@@ -61,6 +61,15 @@ const Bills = ({
       friendOrYou: "",
     });
   };
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await fetch("http://localhost:5000/todos");
+  //     const data = await response.json();
+  //     console.log(data);
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <form className="bill__container">
