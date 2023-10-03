@@ -7,6 +7,7 @@ import ListBox from "./components/ListBox";
 import MovieList from "./components/MovieList";
 import WatchedSummary from "./components/\bWatchedSummary";
 import WatchedList from "./components/WatchedList";
+import StartRating from "./components/StartRating";
 
 const tempMovieData = [
   {
@@ -74,6 +75,10 @@ export default function App() {
           <WatchedList watched={watched} />
         </ListBox>
       </Main>
+
+      <StartRating rating={5} />
+      <StartRating rating={10} />
+      <StartRating />
     </>
   );
 }
