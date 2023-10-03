@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import WatchedSummary from "./\bWatchedSummary";
 import WatchedList from "./WatchedList";
 
