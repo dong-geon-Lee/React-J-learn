@@ -8,6 +8,7 @@ import MovieList from "./components/MovieList";
 import WatchedSummary from "./components/\bWatchedSummary";
 import WatchedList from "./components/WatchedList";
 import StartRating from "./components/StartRating";
+import Test from "./components/Test";
 
 const tempMovieData = [
   {
@@ -75,10 +76,12 @@ export default function App() {
           <WatchedList watched={watched} />
         </ListBox>
       </Main>
-
-      <StartRating rating={5} />
-      <StartRating rating={10} />
-      <StartRating />
+      <StartRating
+        rating={5}
+        messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
+      />
+      <StartRating size={24} color="aqua" className="test" defaultRating={3} />
+      <Test />
     </>
   );
 }
